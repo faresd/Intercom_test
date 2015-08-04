@@ -39,7 +39,6 @@ object Application extends Controller with PrismicController {
 
     } yield {
       val custoemrsDocs = intro.results.map(_.getText("introduction.title"))
-      println(custoemrsDocs, "custoemrsDocs")
 
       Ok(views.html.index(intro.results.headOption, customers.results))
     }
