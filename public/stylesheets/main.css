@@ -1,0 +1,132 @@
+#body {
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', Helvetica, Arial, sans-serif;
+}
+.customer {
+    display: inline-block;
+    margin: 25px;
+    width: 316px;
+    border: 1px solid #d9e5f0;
+    padding: 20px;
+    background: white;
+    color: #757575;
+
+}
+.customer p {
+    margin-top: 25px;
+}
+.intro {
+    background-size: 1680px 896px;
+    background: #4d9de0;
+    padding: 197px 0 116px;
+    color: white;
+    text-align: center;
+}
+.intro h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin: 0 0 21px;
+}
+.intro p {
+    color: #cae0f7;
+    font-size: 1.375rem;
+    line-height: 1.6;
+    max-width: 390px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.module-customers-list {
+    width: 1110px;
+    margin-top: 30px;
+
+}
+
+.module-generic-header {
+    margin-left: 40%;
+}
+
+.featured-customer {
+    height: 699px;
+    width: 100%;
+    background-color: #1e2024;
+    background-position: 100% 20%;
+    background-repeat: no-repeat;
+}
+.featured-customer h2 {
+    color: #4d9de0;
+    margin-top: 0px;
+}
+.featured-customer p {
+    font-size: 2.625rem;
+    width: 500px;
+    color: white;
+    line-height: 1.6;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.featured-customer p:before {
+     content: '“';
+     font-size: 2.8125rem;
+     color: #4d9de0;
+     font-weight: 600;
+     letter-spacing: 0.1em;
+ }
+.featured-customer p:after {
+    content: '”';
+    font-size: 2.8125rem;
+    color: #4d9de0;
+    font-weight: 600;
+
+}
+#content {
+    width: 1364px;
+    font-weight: 600;
+    padding-top: 50px;
+    padding-left: 50px;
+
+}
+#content img {
+    padding-bottom: 30px;
+}
+
+
+.customer-list-container {
+    background-color: #f9fcff;
+    padding-top: 20px;
+}
+.customer-list-container h1 {
+    font-size: 6.25rem;
+    line-height: 1.2;
+    color: #4d9de0;
+    text-align: center;
+}
+.main_navbar {
+    max-width: 1364px;
+    box-sizing: border-box;
+    padding: 9px 20px;
+    display: block;
+    margin: 0 auto;
+    height: 78px;
+}
+.fixed-header {
+    background: #4d9de0 ;
+}
+
+.grid {
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 1246px;
+}
+
+.logo {
+    text-align: center;
+}
+.screen {
+    margin-bottom: 25px;
+}

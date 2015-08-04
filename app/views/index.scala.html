@@ -1,0 +1,44 @@
+@(intro: Option[io.prismic.Document], custormers: Seq[io.prismic.Document])(implicit ctx: PrismicHelper.Context)
+
+@main("All documents", intro) {
+  <div class="intro" style= "@{"background-image: url(" + intro.map(_.getImage("introduction.background_image", "site_width_image").map(_.url).getOrElse(routes.Assets.at("images/missing-image.png"))).getOrElse(routes.Assets.at("images/missing-image.png")) + ")"};">
+    <div class="customers-grid grid module-generic-header">
+      <h1 class="section-headline">@intro.map(_.getText("introduction.title"))
+      </h1>
+      <p class="section-subheadline">@intro.map(_.getText("introduction.explicittitle"))</p>
+    </div>
+  </div>
+
+  <div>
+    @defining(custormers.filter(_.tags.contains("Featured")).headOption) { customer =>
+      <div class="featured-customer" style= "@{"background-image: url(" + customer.map(_.getImage("customer.main_image", "full_screen_image").map(_.url).getOrElse(routes.Assets.at("images/missing-image.png"))).getOrElse(routes.Assets.at("images/missing-image.png")) + ")"};">
+        <div id="content" class="grid">
+          <h2>Featured customer</h2>
+          <img src="@customer.map(_.getImage("customer.logo", "featured_icon").map(_.url).getOrElse(routes.Assets.at("images/missing-image.png")))">
+          <p class="desc">Intercom allows us to ‘scale authenticity’ and foster a passionate community of users. By A/B testing message format and content, we see open rates above 75% for all of our onboarding emails.</p>
+        </div>
+      </div>
+    }
+
+  </div>
+  <div>
+    <div class="customer-list-container grid">
+      <h1 class="section-headline">Customer stories</h1>
+      <div class="module-customers-list" >
+
+        @custormers.filterNot(_.tags.contains("Featured")).take(6).map { custormer =>
+          <div class="customer">
+            <div class="screen">
+              <img src="@custormer.getImage("customer.main_image", "icon_medium").map(_.url).getOrElse(routes.Assets.at("images/missing-image.png"))">
+            </div>
+            <div class="logo">
+              <img src="@custormer.getImage("customer.logo", "icon").map(_.url).getOrElse(routes.Assets.at("images/missing-image.png"))">
+            </div>
+            <p>@custormer.getText("customer.description").getOrElse("custormer")</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+}
